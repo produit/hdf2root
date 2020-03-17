@@ -12,9 +12,10 @@ ROOTLIBDIR   := $(shell root-config --libdir)
 ROOTLIBS     := -L$(ROOTLIBDIR) -lCore -lRIO -lTree 
 
 # HDF5 FLAGS
-HDF5CFLAGS    = -I$(HDF5CPP)/include
-HDF5LIBS      = -L$(HDF5CPP)/lib -lhdf5 -lhdf5_cpp
-
+#HDF5CFLAGS    = -I$(HDF5CPP)/include
+HDF5CFLAGS     = -I/usr/include/hdf5/serial
+#HDF5LIBS      = -L$(HDF5CPP)/lib -lhdf5 -lhdf5_cpp
+HDF5LIBS       = -L/usr/lib/x86_64-linux-gnu/hdf5/serial/ -lhdf5 -lhdf5_cpp
 LIB           = hdf2root
 H2RLIBS       = -L$(LIBDIR) -l$(LIB)
 

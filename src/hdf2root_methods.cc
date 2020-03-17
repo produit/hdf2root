@@ -51,8 +51,14 @@ char map_h5type_to_root(DataType type) {
   if(type == PredType::NATIVE_LONG){
     return 'I';
   }
+  if(type == PredType::NATIVE_LLONG){
+    return 'L';
+  }
   if(type == PredType::NATIVE_ULONG){
     return 'i';
+  }
+  if(type == PredType::NATIVE_ULLONG){
+    return 'l';
   }
   if(type == PredType::NATIVE_FLOAT){
     return 'F';
